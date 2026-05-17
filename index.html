@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -27,10 +28,10 @@
         .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; }
         .card { background: white; border-radius: 20px; padding: 28px; box-shadow: 0 8px 20px rgba(0,0,0,0.05); }
         .card i { font-size: 2.5rem; color: #6FB045; margin-bottom: 16px; }
-        .productos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 32px; }
+        .productos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; }
         .producto-card { background: white; border-radius: 24px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.05); transition: 0.2s; }
         .producto-card:hover { transform: translateY(-5px); }
-        .producto-img { background: #e2e8f0; height: 160px; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: #005A9C; }
+        .producto-img { height: 200px; background-size: cover; background-position: center; }
         .producto-info { padding: 20px; }
         .faq-item { background: white; border-radius: 16px; margin-bottom: 16px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
         .faq-question { background: #f1f5f9; padding: 18px 24px; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
@@ -114,48 +115,45 @@
         </div>
     </section>
 
-    <!-- PRODUCTOS -->
+    <!-- PRODUCTOS con imágenes reales (Unsplash) -->
     <section id="productos">
         <div class="container">
             <h3 class="section-title" data-key="products-title">Nuestros equipos</h3>
             <div class="productos-grid">
-                <div class="producto-card"><div class="producto-img"><i class="fas fa-snowflake"></i></div><div class="producto-info"><h4>Split MUPR-H11</h4><p data-key="prod1-desc">Inverter, Wi-Fi integrado, eficiencia A++/A+++, refrigerante R-32. Ideal para viviendas.</p><strong data-key="prod1-tag">Gama doméstica estrella</strong></div></div>
-                <div class="producto-card"><div class="producto-img"><i class="fas fa-wind"></i></div><div class="producto-info"><h4>Conductos MUCR</h4><p data-key="prod2-desc">Sistema de conductos para climatización integral en viviendas, oficinas y locales comerciales.</p></div></div>
-                <div class="producto-card"><div class="producto-img"><i class="fas fa-leaf"></i></div><div class="producto-info"><h4>Aerotermia Aerotherm V17</h4><p data-key="prod3-desc">Alta eficiencia, sostenible, bajo consumo. Solución perfecta para rehabilitación energética.</p></div></div>
-                <div class="producto-card"><div class="producto-img"><i class="fas fa-building"></i></div><div class="producto-info"><h4>Cassette MUCSR</h4><p data-key="prod4-desc">Flujo de aire 360°, ideal para oficinas, tiendas y espacios comerciales.</p></div></div>
+                <div class="producto-card">
+                    <div class="producto-img" style="background-image: url('https://images.unsplash.com/photo-1581235725700-0c6f09d5b6b0?w=400&h=250&fit=crop');"></div>
+                    <div class="producto-info"><h4>Split MUPR-H11</h4><p data-key="prod1-desc">Inverter, Wi-Fi integrado, eficiencia A++/A+++, refrigerante R-32. Ideal para viviendas.</p><strong data-key="prod1-tag">Gama doméstica estrella</strong></div>
+                </div>
+                <div class="producto-card">
+                    <div class="producto-img" style="background-image: url('https://images.unsplash.com/photo-1580128665085-5c6f6c8a5c5a?w=400&h=250&fit=crop');"></div>
+                    <div class="producto-info"><h4>Conductos MUCR</h4><p data-key="prod2-desc">Sistema de conductos para climatización integral en viviendas, oficinas y locales comerciales.</p></div>
+                </div>
+                <div class="producto-card">
+                    <div class="producto-img" style="background-image: url('https://images.unsplash.com/photo-1567016432779-094f9a9b0c0b?w=400&h=250&fit=crop');"></div>
+                    <div class="producto-info"><h4>Aerotermia Aerotherm V17</h4><p data-key="prod3-desc">Alta eficiencia, sostenible, bajo consumo. Solución perfecta para rehabilitación energética.</p></div>
+                </div>
+                <div class="producto-card">
+                    <div class="producto-img" style="background-image: url('https://images.unsplash.com/photo-1581235725700-0c6f09d5b6b0?w=400&h=250&fit=crop');"></div>
+                    <div class="producto-info"><h4>Cassette MUCSR</h4><p data-key="prod4-desc">Flujo de aire 360°, ideal para oficinas, tiendas y espacios comerciales.</p></div>
+                </div>
             </div>
             <p style="text-align: center; margin-top: 32px;"><strong data-key="supplier-text">Proveedor principal: Midea Group · 3 años de garantía · Alta disponibilidad de stock</strong></p>
         </div>
     </section>
 
-    <!-- FAQ - PREGUNTAS FRECUENTES -->
+    <!-- FAQ -->
     <section id="faq" style="background-color: #f8fafc;">
         <div class="container">
             <h3 class="section-title" data-key="faq-title">Preguntas frecuentes</h3>
-            <div class="faq-item">
-                <div class="faq-question" data-faq="1"><span data-key="faq1-q">¿Cuál es el plazo de entrega en Sevilla?</span><i class="fas fa-chevron-down"></i></div>
-                <div class="faq-answer" id="faq-1"><p data-key="fa1-a">Realizamos entregas en 24-48 horas laborables para pedidos con stock disponible en nuestra nave de Sevilla.</p></div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question" data-faq="2"><span data-key="faq2-q">¿Ofrecen soporte técnico para instaladores?</span><i class="fas fa-chevron-down"></i></div>
-                <div class="faq-answer" id="faq-2"><p data-key="fa2-a">Sí, disponemos de vendedores técnicos de mostrador y un comercial externo para asesoramiento personalizado.</p></div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question" data-faq="3"><span data-key="faq3-q">¿Qué garantía tienen los equipos Mundoclima?</span><i class="fas fa-chevron-down"></i></div>
-                <div class="faq-answer" id="faq-3"><p data-key="fa3-a">Todos nuestros equipos tienen 3 años de garantía, ampliable mediante condiciones comerciales.</p></div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question" data-faq="4"><span data-key="faq4-q">¿Cómo puedo contactar con la sucursal?</span><i class="fas fa-chevron-down"></i></div>
-                <div class="faq-answer" id="faq-4"><p data-key="fa4-a">Puede llamarnos al 954 123 456, escribir a sevilla@mundoclima.es o visitarnos en el Polígono El Pino.</p></div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question" data-faq="5"><span data-key="faq5-q">¿Trabajan con profesionales fuera de Sevilla?</span><i class="fas fa-chevron-down"></i></div>
-                <div class="faq-answer" id="faq-5"><p data-key="fa5-a">Sí, realizamos envíos a toda Andalucía occidental. Consulta condiciones para otras provincias.</p></div>
-            </div>
+            <div class="faq-item"><div class="faq-question" data-faq="1"><span data-key="faq1-q">¿Cuál es el plazo de entrega en Sevilla?</span><i class="fas fa-chevron-down"></i></div><div class="faq-answer" id="faq-1"><p data-key="fa1-a">Realizamos entregas en 24-48 horas laborables para pedidos con stock disponible en nuestra nave de Sevilla.</p></div></div>
+            <div class="faq-item"><div class="faq-question" data-faq="2"><span data-key="faq2-q">¿Ofrecen soporte técnico para instaladores?</span><i class="fas fa-chevron-down"></i></div><div class="faq-answer" id="faq-2"><p data-key="fa2-a">Sí, disponemos de vendedores técnicos de mostrador y un comercial externo para asesoramiento personalizado.</p></div></div>
+            <div class="faq-item"><div class="faq-question" data-faq="3"><span data-key="faq3-q">¿Qué garantía tienen los equipos Mundoclima?</span><i class="fas fa-chevron-down"></i></div><div class="faq-answer" id="faq-3"><p data-key="fa3-a">Todos nuestros equipos tienen 3 años de garantía, ampliable mediante condiciones comerciales.</p></div></div>
+            <div class="faq-item"><div class="faq-question" data-faq="4"><span data-key="faq4-q">¿Cómo puedo contactar con la sucursal?</span><i class="fas fa-chevron-down"></i></div><div class="faq-answer" id="faq-4"><p data-key="fa4-a">Puede llamarnos al 954 123 456, escribir a sevilla@mundoclima.es o visitarnos en el Polígono El Pino.</p></div></div>
+            <div class="faq-item"><div class="faq-question" data-faq="5"><span data-key="faq5-q">¿Trabajan con profesionales fuera de Sevilla?</span><i class="fas fa-chevron-down"></i></div><div class="faq-answer" id="faq-5"><p data-key="fa5-a">Sí, realizamos envíos a toda Andalucía occidental. Consulta condiciones para otras provincias.</p></div></div>
         </div>
     </section>
 
-    <!-- FORMULARIO SUSCRIPCIÓN OFERTAS -->
+    <!-- FORMULARIO SUSCRIPCIÓN -->
     <section id="suscripcion" style="background-color: #f1f5f9;">
         <div class="container">
             <h3 class="section-title" data-key="subs-title">📧 Suscríbete a nuestras ofertas</h3>
@@ -169,7 +167,7 @@
         </div>
     </section>
 
-    <!-- FORMULARIO CONTRATACIÓN LABORAL -->
+    <!-- FORMULARIO CONTRATACIÓN -->
     <section id="contratacion">
         <div class="container">
             <h3 class="section-title" data-key="jobs-title">💼 Trabaja con nosotros</h3>
@@ -207,20 +205,24 @@
         });
     });
 
-    // IDIOMAS
+    // TRADUCCIONES COMPLETAS (incluyendo párrafos largos)
     const translations = {
         es: {
             "nav-inicio": "Inicio", "nav-sobre": "Sobre nosotros", "nav-sucursal": "Nueva sucursal", "nav-productos": "Productos", "nav-faq": "FAQ", "nav-ofertas": "Ofertas", "nav-trabajo": "Trabaja con nosotros",
             "hero-title": "Climatización eficiente para Sevilla", "hero-text": "Alta eficiencia energética, tecnología inverter y aerotermia. Asesoramiento técnico para profesionales y particulares.", "hero-btn": "Descubre nuestros productos",
-            "about-title": "Sobre Mundoclima Sevilla", "mision-title": "Misión", "vision-title": "Visión", "values-title": "Valores",
-            "branch-title": "📢 Nueva sucursal en Sevilla", "branch-location-title": "Ubicación estratégica", "branch-size-title": "300 m² de instalaciones", "branch-team-title": "Equipo especializado", "branch-delivery-title": "Entregas 24-48h", "branch-support-title": "Asesoramiento técnico", "branch-date-title": "Apertura 2026",
+            "about-title": "Sobre Mundoclima Sevilla",
+            "mision-title": "Misión", "mision-text": "Ofrecer soluciones de climatización eficientes, innovadoras y accesibles para instaladores y clientes finales, garantizando alta calidad, servicio técnico especializado y atención cercana. La nueva sucursal de Sevilla refuerza nuestra presencia en Andalucía, dando respuesta rápida a la alta demanda.",
+            "vision-title": "Visión", "vision-text": "Consolidarnos como marca de referencia en climatización en España, destacando por innovación, sostenibilidad y eficiencia energética, fortaleciendo nuestra red de distribución y apostando por aerotermia y tecnologías sostenibles.",
+            "values-title": "Valores", "values-text": "Calidad y fiabilidad · Orientación al cliente · Innovación tecnológica · Compromiso medioambiental · Profesionalidad y servicio · Trabajo en equipo.",
+            "branch-title": "📢 Nueva sucursal en Sevilla", "branch-location-title": "Ubicación estratégica", "branch-location-text": "Polígono Industrial El Pino, zona Palmete-Padre Pío-Hacienda San Antonio, distrito Cerro-Amate, Sevilla.",
+            "branch-size-title": "300 m² de instalaciones", "branch-size-text": "Almacén logístico + oficinas comerciales y administrativas.",
+            "branch-team-title": "Equipo especializado", "branch-team-text": "8 profesionales: gerencia, administración, ventas, logística y soporte técnico.",
+            "branch-delivery-title": "Entregas 24-48h", "branch-delivery-text": "Stock inmediato y reparto rápido en toda la provincia de Sevilla.",
+            "branch-support-title": "Asesoramiento técnico", "branch-support-text": "Atención personalizada a instaladores, ingenierías y empresas de mantenimiento HVAC.",
+            "branch-date-title": "Apertura 2026", "branch-date-text": "Ya operativa para atender la alta demanda de climatización en Andalucía.",
             "products-title": "Nuestros equipos", "prod1-desc": "Inverter, Wi-Fi integrado, eficiencia A++/A+++, refrigerante R-32. Ideal para viviendas.", "prod1-tag": "Gama doméstica estrella", "prod2-desc": "Sistema de conductos para climatización integral en viviendas, oficinas y locales comerciales.", "prod3-desc": "Alta eficiencia, sostenible, bajo consumo. Solución perfecta para rehabilitación energética.", "prod4-desc": "Flujo de aire 360°, ideal para oficinas, tiendas y espacios comerciales.", "supplier-text": "Proveedor principal: Midea Group · 3 años de garantía · Alta disponibilidad de stock",
             "faq-title": "Preguntas frecuentes", "faq1-q": "¿Cuál es el plazo de entrega en Sevilla?", "faq2-q": "¿Ofrecen soporte técnico para instaladores?", "faq3-q": "¿Qué garantía tienen los equipos Mundoclima?", "faq4-q": "¿Cómo puedo contactar con la sucursal?", "faq5-q": "¿Trabajan con profesionales fuera de Sevilla?",
-            "fa1-a": "Realizamos entregas en 24-48 horas laborables para pedidos con stock disponible en nuestra nave de Sevilla.",
-            "fa2-a": "Sí, disponemos de vendedores técnicos de mostrador y un comercial externo para asesoramiento personalizado.",
-            "fa3-a": "Todos nuestros equipos tienen 3 años de garantía, ampliable mediante condiciones comerciales.",
-            "fa4-a": "Puede llamarnos al 954 123 456, escribir a sevilla@mundoclima.es o visitarnos en el Polígono El Pino.",
-            "fa5-a": "Sí, realizamos envíos a toda Andalucía occidental. Consulta condiciones para otras provincias.",
+            "fa1-a": "Realizamos entregas en 24-48 horas laborables para pedidos con stock disponible en nuestra nave de Sevilla.", "fa2-a": "Sí, disponemos de vendedores técnicos de mostrador y un comercial externo para asesoramiento personalizado.", "fa3-a": "Todos nuestros equipos tienen 3 años de garantía, ampliable mediante condiciones comerciales.", "fa4-a": "Puede llamarnos al 954 123 456, escribir a sevilla@mundoclima.es o visitarnos en el Polígono El Pino.", "fa5-a": "Sí, realizamos envíos a toda Andalucía occidental. Consulta condiciones para otras provincias.",
             "subs-title": "📧 Suscríbete a nuestras ofertas", "subs-name": "Nombre completo", "subs-type": "Tipo de cliente", "subs-inst": "Instalador profesional", "subs-company": "Empresa / Ingeniería", "subs-individual": "Particular", "subs-btn": "Suscribirme",
             "jobs-title": "💼 Trabaja con nosotros", "jobs-select": "Puesto al que optas", "job-manager": "Gerente de Sucursal", "job-admin": "Administrativo/a", "job-sales": "Comercial Externo", "job-tech": "Vendedor Técnico de Mostrador", "job-warehouse": "Responsable de Almacén", "job-assistant": "Auxiliar de Almacén y Reparto", "jobs-btn": "Enviar candidatura",
             "address": "📍 Polígono El Pino, Palmete · Sevilla · 41015", "copyright": "© 2026 Mundoclima Sevilla · Grupo Salvador Escoda S.A.", "legal": "Aviso legal | Política de privacidad"
@@ -228,31 +230,39 @@
         en: {
             "nav-inicio": "Home", "nav-sobre": "About us", "nav-sucursal": "New branch", "nav-productos": "Products", "nav-faq": "FAQ", "nav-ofertas": "Offers", "nav-trabajo": "Work with us",
             "hero-title": "Efficient climate control for Seville", "hero-text": "High energy efficiency, inverter technology and aerothermy. Technical advice for professionals and individuals.", "hero-btn": "Discover our products",
-            "about-title": "About Mundoclima Seville", "mision-title": "Mission", "vision-title": "Vision", "values-title": "Values",
-            "branch-title": "📢 New branch in Seville", "branch-location-title": "Strategic location", "branch-size-title": "300 m² of facilities", "branch-team-title": "Specialized team", "branch-delivery-title": "24-48h deliveries", "branch-support-title": "Technical advice", "branch-date-title": "Opening 2026",
+            "about-title": "About Mundoclima Seville",
+            "mision-title": "Mission", "mision-text": "To offer efficient, innovative and accessible climate control solutions for installers and end customers, guaranteeing high quality, specialized technical service and close attention. The new branch in Seville reinforces our presence in Andalusia, providing a quick response to high demand.",
+            "vision-title": "Vision", "vision-text": "To become a reference brand in climate control in Spain, standing out for innovation, sustainability and energy efficiency, strengthening our distribution network and committing to aerothermy and sustainable technologies.",
+            "values-title": "Values", "values-text": "Quality and reliability · Customer orientation · Technological innovation · Environmental commitment · Professionalism and service · Teamwork.",
+            "branch-title": "📢 New branch in Seville", "branch-location-title": "Strategic location", "branch-location-text": "El Pino Industrial Estate, Palmete-Padre Pío-Hacienda San Antonio area, Cerro-Amate district, Seville.",
+            "branch-size-title": "300 m² of facilities", "branch-size-text": "Logistics warehouse + commercial and administrative offices.",
+            "branch-team-title": "Specialized team", "branch-team-text": "8 professionals: management, administration, sales, logistics and technical support.",
+            "branch-delivery-title": "24-48h deliveries", "branch-delivery-text": "Immediate stock and fast delivery throughout the province of Seville.",
+            "branch-support-title": "Technical advice", "branch-support-text": "Personalized attention for installers, engineering firms and HVAC maintenance companies.",
+            "branch-date-title": "Opening 2026", "branch-date-text": "Already operating to meet the high demand for climate control in Andalusia.",
             "products-title": "Our equipment", "prod1-desc": "Inverter, built-in Wi-Fi, A++/A+++ efficiency, R-32 refrigerant. Ideal for homes.", "prod1-tag": "Star domestic range", "prod2-desc": "Duct system for comprehensive climate control in homes, offices and commercial premises.", "prod3-desc": "High efficiency, sustainable, low consumption. Perfect for energy renovation.", "prod4-desc": "360° airflow, ideal for offices, shops and commercial spaces.", "supplier-text": "Main supplier: Midea Group · 3-year warranty · High stock availability",
             "faq-title": "Frequently Asked Questions", "faq1-q": "What is the delivery time in Seville?", "faq2-q": "Do you offer technical support for installers?", "faq3-q": "What warranty do Mundoclima equipment have?", "faq4-q": "How can I contact the branch?", "faq5-q": "Do you work with professionals outside Seville?",
-            "fa1-a": "We deliver within 24-48 business hours for orders with stock available at our Seville warehouse.",
-            "fa2-a": "Yes, we have counter technical salespeople and an external salesperson for personalized advice.",
-            "fa3-a": "All our equipment has a 3-year warranty, extendable through commercial conditions.",
-            "fa4-a": "You can call us at 954 123 456, email sevilla@mundoclima.es or visit us at Polígono El Pino.",
-            "fa5-a": "Yes, we ship throughout western Andalusia. Ask about conditions for other provinces.",
+            "fa1-a": "We deliver within 24-48 business hours for orders with stock available at our Seville warehouse.", "fa2-a": "Yes, we have counter technical salespeople and an external salesperson for personalized advice.", "fa3-a": "All our equipment has a 3-year warranty, extendable through commercial conditions.", "fa4-a": "You can call us at 954 123 456, email sevilla@mundoclima.es or visit us at El Pino Industrial Estate.", "fa5-a": "Yes, we ship throughout western Andalusia. Ask about conditions for other provinces.",
             "subs-title": "📧 Subscribe to our offers", "subs-name": "Full name", "subs-type": "Client type", "subs-inst": "Professional installer", "subs-company": "Company / Engineering", "subs-individual": "Individual", "subs-btn": "Subscribe",
             "jobs-title": "💼 Work with us", "jobs-select": "Position you are applying for", "job-manager": "Branch Manager", "job-admin": "Administrative", "job-sales": "External Salesperson", "job-tech": "Counter Technical Sales", "job-warehouse": "Warehouse Manager", "job-assistant": "Warehouse and Delivery Assistant", "jobs-btn": "Send application",
-            "address": "📍 Polígono El Pino, Palmete · Seville · 41015", "copyright": "© 2026 Mundoclima Seville · Grupo Salvador Escoda S.A.", "legal": "Legal notice | Privacy policy"
+            "address": "📍 El Pino Industrial Estate, Palmete · Seville · 41015", "copyright": "© 2026 Mundoclima Seville · Grupo Salvador Escoda S.A.", "legal": "Legal notice | Privacy policy"
         },
         ca: {
             "nav-inicio": "Inici", "nav-sobre": "Sobre nosaltres", "nav-sucursal": "Nova sucursal", "nav-productos": "Productes", "nav-faq": "FAQ", "nav-ofertas": "Ofertes", "nav-trabajo": "Treballa amb nosaltres",
             "hero-title": "Climatització eficient per a Sevilla", "hero-text": "Alta eficiència energètica, tecnologia inverter i aerotèrmia. Assessorament tècnic per a professionals i particulars.", "hero-btn": "Descobreix els nostres productes",
-            "about-title": "Sobre Mundoclima Sevilla", "mision-title": "Missió", "vision-title": "Visió", "values-title": "Valors",
-            "branch-title": "📢 Nova sucursal a Sevilla", "branch-location-title": "Ubicació estratègica", "branch-size-title": "300 m² d'instal·lacions", "branch-team-title": "Equip especialitzat", "branch-delivery-title": "Lliuraments 24-48h", "branch-support-title": "Assessorament tècnic", "branch-date-title": "Obertura 2026",
+            "about-title": "Sobre Mundoclima Sevilla",
+            "mision-title": "Missió", "mision-text": "Oferir solucions de climatització eficients, innovadores i accessibles per a instal·ladors i clients finals, garantint alta qualitat, servei tècnic especialitzat i atenció propera. La nova sucursal de Sevilla reforça la nostra presència a Andalusia, donant resposta ràpida a l'alta demanda.",
+            "vision-title": "Visió", "vision-text": "Consolidar-nos com a marca de referència en climatització a Espanya, destacant per innovació, sostenibilitat i eficiència energètica, enfortint la nostra xarxa de distribució i apostant per l'aerotèrmia i tecnologies sostenibles.",
+            "values-title": "Valors", "values-text": "Qualitat i fiabilitat · Orientació al client · Innovació tecnològica · Compromís mediambiental · Professionalitat i servei · Treball en equip.",
+            "branch-title": "📢 Nova sucursal a Sevilla", "branch-location-title": "Ubicació estratègica", "branch-location-text": "Polígon Industrial El Pino, zona Palmete-Padre Pío-Hacienda San Antonio, districte Cerro-Amate, Sevilla.",
+            "branch-size-title": "300 m² d'instal·lacions", "branch-size-text": "Magatzem logístic + oficines comercials i administratives.",
+            "branch-team-title": "Equip especialitzat", "branch-team-text": "8 professionals: gerència, administració, vendes, logística i suport tècnic.",
+            "branch-delivery-title": "Lliuraments 24-48h", "branch-delivery-text": "Estoc immediat i repartiment ràpid a tota la província de Sevilla.",
+            "branch-support-title": "Assessorament tècnic", "branch-support-text": "Atenció personalitzada a instal·ladors, enginyeries i empreses de manteniment HVAC.",
+            "branch-date-title": "Obertura 2026", "branch-date-text": "Ja operativa per atendre l'alta demanda de climatització a Andalusia.",
             "products-title": "Els nostres equips", "prod1-desc": "Inverter, Wi-Fi integrat, eficiència A++/A+++, refrigerant R-32. Ideal per a habitatges.", "prod1-tag": "Gamma domèstica estrella", "prod2-desc": "Sistema de conductes per a climatització integral en habitatges, oficines i locals comercials.", "prod3-desc": "Alta eficiència, sostenible, baix consum. Solució perfecta per a rehabilitació energètica.", "prod4-desc": "Flux d'aire 360°, ideal per a oficines, botigues i espais comercials.", "supplier-text": "Proveïdor principal: Midea Group · 3 anys de garantia · Alta disponibilitat d'estoc",
             "faq-title": "Preguntes freqüents", "faq1-q": "Quin és el termini de lliurament a Sevilla?", "faq2-q": "Ofereu suport tècnic per a instal·ladors?", "faq3-q": "Quina garantia tenen els equips Mundoclima?", "faq4-q": "Com puc contactar amb la sucursal?", "faq5-q": "Treballau amb professionals fora de Sevilla?",
-            "fa1-a": "Realitzem lliuraments en 24-48 hores laborables per a comandes amb estoc disponible al nostre magatzem de Sevilla.",
-            "fa2-a": "Sí, disposem de venedors tècnics de taulell i un comercial extern per a assessorament personalitzat.",
-            "fa3-a": "Tots els nostres equips tenen 3 anys de garantia, ampliable mitjançant condicions comercials.",
-            "fa4-a": "Podeu trucar-nos al 954 123 456, escriure a sevilla@mundoclima.es o visitar-nos al Polígon El Pino.",
-            "fa5-a": "Sí, realitzem enviaments a tota Andalusia occidental. Consulteu condicions per a altres províncies.",
+            "fa1-a": "Realitzem lliuraments en 24-48 hores laborables per a comandes amb estoc disponible al nostre magatzem de Sevilla.", "fa2-a": "Sí, disposem de venedors tècnics de taulell i un comercial extern per a assessorament personalitzat.", "fa3-a": "Tots els nostres equips tenen 3 anys de garantia, ampliable mitjançant condicions comercials.", "fa4-a": "Podeu trucar-nos al 954 123 456, escriure a sevilla@mundoclima.es o visitar-nos al Polígon El Pino.", "fa5-a": "Sí, realitzem enviaments a tota Andalusia occidental. Consulteu condicions per a altres províncies.",
             "subs-title": "📧 Subscriu-te a les nostres ofertes", "subs-name": "Nom complet", "subs-type": "Tipus de client", "subs-inst": "Instal·lador professional", "subs-company": "Empresa / Enginyeria", "subs-individual": "Particular", "subs-btn": "Subscriure'm",
             "jobs-title": "💼 Treballa amb nosaltres", "jobs-select": "Càrrec al qual optes", "job-manager": "Gerent de Sucursal", "job-admin": "Administratiu/iva", "job-sales": "Comercial Extern", "job-tech": "Venedor Tècnic de Taulell", "job-warehouse": "Responsable de Magatzem", "job-assistant": "Auxiliar de Magatzem i Repartiment", "jobs-btn": "Enviar candidatura",
             "address": "📍 Polígon El Pino, Palmete · Sevilla · 41015", "copyright": "© 2026 Mundoclima Sevilla · Grup Salvador Escoda S.A.", "legal": "Avís legal | Política de privacitat"
@@ -260,6 +270,7 @@
     };
 
     function setLanguage(lang) {
+        // Texto normal
         document.querySelectorAll('[data-key]').forEach(el => {
             const key = el.getAttribute('data-key');
             if (translations[lang] && translations[lang][key]) {
@@ -272,6 +283,10 @@
                 }
             }
         });
+        // Título de la web (cambia también el <title>)
+        document.title = lang === 'es' ? 'Mundoclima Sevilla | Climatización eficiente' :
+                         lang === 'en' ? 'Mundoclima Seville | Efficient climate control' :
+                         'Mundoclima Sevilla | Climatització eficient';
         document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
         document.querySelector(`.lang-btn[data-lang="${lang}"]`).classList.add('active');
         localStorage.setItem('preferred_lang', lang);
@@ -286,10 +301,22 @@
 
     // Formularios
     document.getElementById('form-suscripcion').addEventListener('submit', function(e) {
-        e.preventDefault(); alert('✅ Gracias por suscribirte. Recibirás nuestras ofertas y novedades.'); this.reset();
+        e.preventDefault();
+        const lang = localStorage.getItem('preferred_lang') || 'es';
+        const msg = lang === 'es' ? '✅ Gracias por suscribirte. Recibirás nuestras ofertas y novedades.' :
+                    lang === 'en' ? '✅ Thank you for subscribing. You will receive our offers and news.' :
+                    '✅ Gràcies per subscriure-t. Rebràs les nostres ofertes i novetats.';
+        alert(msg);
+        this.reset();
     });
     document.getElementById('form-trabajo').addEventListener('submit', function(e) {
-        e.preventDefault(); alert('📄 Hemos recibido tu candidatura. En breve nos pondremos en contacto.'); this.reset();
+        e.preventDefault();
+        const lang = localStorage.getItem('preferred_lang') || 'es';
+        const msg = lang === 'es' ? '📄 Hemos recibido tu candidatura. En breve nos pondremos en contacto.' :
+                    lang === 'en' ? '📄 We have received your application. We will contact you shortly.' :
+                    '📄 Hem rebut la teva candidatura. En breu ens posarem en contacte.';
+        alert(msg);
+        this.reset();
     });
 </script>
 </body>
